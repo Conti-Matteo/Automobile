@@ -12,9 +12,11 @@ namespace Automobile
 {
     public partial class Form1 : Form
     {
+        Auto auto;
         public Form1()
         {
             InitializeComponent();
+            auto = new Auto();
         }
 
         #region Form
@@ -23,5 +25,42 @@ namespace Automobile
 
         }
         #endregion
+
+        #region textBox
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region label
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region Button
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+        private void button2_Click(object sender, EventArgs e)
+        {
+            auto.accensione();
+            if (auto.motore == false)
+            {
+                button1.BackColor = Color.Red;
+                label1.Text = "La macchina è spenta";
+            }
+            else
+            {
+                button1.BackColor = Color.Green;
+                label1.Text = "La macchina è accesa";
+            }
+        }
+        #endregion
+
+
     }
 }

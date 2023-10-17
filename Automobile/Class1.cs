@@ -9,31 +9,43 @@ namespace Automobile
     internal class Auto
     {
         //attributi
-        private bool motore;//dichiaro la variabile utilizzata per l'accensione dell'auto
-        private int tacchimetro;//dichiaro variable per la visualizzazione della velocità
-        private int cambio;//dichiaro variabile per la visualizzazione della marcia
+        private bool Motore;//dichiaro la variabile utilizzata per l'accensione dell'auto
+        private int Tacchimetro;//dichiaro variable per la visualizzazione della velocità
+        private int Cambio;//dichiaro variabile per la visualizzazione della marcia
 
         public Auto()
         {
-            Motore = false;
-            Tacchimetro = 0;
-            Cambio = 0;
+            motore = false;
+            tacchimetro = 0;
+            cambio = 0;
         }
         //funzioni get e set
-        bool Motore
+        public bool motore
         {
-            get { return motore; }
-            set { motore = value; }
+            get { return Motore; }
+            set { Motore = value; }
         }
-        int Tacchimetro
+        public int tacchimetro
         {
-            get { return tacchimetro; }
-            set { tacchimetro = value; }
+            get { return Tacchimetro; }
+            set { Tacchimetro = value; }
         }
-        int Cambio
+        public int cambio
         {
-            get { return cambio; }
-            set { cambio = value; }
+            get { return Cambio; }
+            set { Cambio = value; }
+        }
+        //funzioni
+        public void accensione()
+        {
+            if (motore == false)
+            {
+                motore = true;
+            }
+            else
+            {
+                motore = false;
+            }
         }
     }
 }
