@@ -26,17 +26,14 @@ namespace Automobile
         }
         #endregion
 
-        #region textBox
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-        #endregion
-
         #region label
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+        private void label2_Click(object sender, EventArgs e)
+        {
+            label2.Text = auto.tacchimetro + "Km/h";
         }
         #endregion
 
@@ -59,8 +56,15 @@ namespace Automobile
                 label1.Text = "La macchina è accesa";
             }
         }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            auto.accelleratore();
+        }
+        private void button4_Click(object sender, EventArgs e)
+        {
+            auto.freno();
+        }
         #endregion
-
 
     }
 }

@@ -47,5 +47,14 @@ namespace Automobile
                 motore = false;
             }
         }
+        public void accelleratore()
+        {
+            Tacchimetro = tacchimetro + 10;
+        }
+        public void freno()
+        {
+            Tacchimetro = tacchimetro - 10;
+        }
+
     }
 }
