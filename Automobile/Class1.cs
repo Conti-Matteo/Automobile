@@ -53,7 +53,14 @@ namespace Automobile
         }
         public void freno()
         {
-            Tacchimetro = tacchimetro - 10;
+            if(Tacchimetro <= 0)
+            {
+                Tacchimetro = 0;
+            }
+            else
+            {
+                Tacchimetro = tacchimetro - 10;
+            }
         }
 
     }

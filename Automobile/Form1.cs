@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -49,6 +50,7 @@ namespace Automobile
             {
                 button1.BackColor = Color.Red;
                 label1.Text = "La macchina è spenta";
+                label2.Text = "0Km/h";
             }
             else
             {
@@ -58,11 +60,30 @@ namespace Automobile
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            auto.accelleratore();
+            if (auto.motore == false)
+            {
+                label3.Text = "La macchina è spenta accendere il motore prima di partire";
+            }
+            else
+            {
+                auto.accelleratore();
+                label2.Text = auto.tacchimetro + "Km/h";
+                label3.Text = "";
+            }
         }
         private void button4_Click(object sender, EventArgs e)
         {
-            auto.freno();
+            if(auto.motore == false)
+            {
+                label3.Text = "La macchina è spenta accendere il motore prima di partire";
+            }
+            else
+            {
+                auto.freno();
+                label2.Text = auto.tacchimetro + "Km/h";
+                label3.Text = "";
+            }
+
         }
         #endregion
 
