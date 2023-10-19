@@ -9,31 +9,58 @@ namespace Automobile
     internal class Auto
     {
         //attributi
-        private bool Motore;//dichiaro la variabile utilizzata per l'accensione dell'auto
-        private int Tacchimetro;//dichiaro variable per la visualizzazione della velocità
-        private int Cambio;//dichiaro variabile per la visualizzazione della marcia
+        private bool _motore;//dichiaro la variabile utilizzata per l'accensione dell'auto
+        private int _tacchimetro;//dichiaro variable per la visualizzazione della velocità
+        private int _cambio;//dichiaro variabile per la visualizzazione della marcia
+        private bool _frizione;
 
         public Auto()
         {
             motore = false;
             tacchimetro = 0;
             cambio = 0;
+            frizione = false;
         }
         //funzioni get e set
         public bool motore
         {
-            get { return Motore; }
-            set { Motore = value; }
+            get { return _motore; }
+            set { _motore = value; }
         }
         public int tacchimetro
         {
-            get { return Tacchimetro; }
-            set { Tacchimetro = value; }
+            get { return _tacchimetro; }
+            set
+            {
+                if(_tacchimetro<0)
+                {
+                    _tacchimetro = 0;
+                }
+                else
+                {
+                    _tacchimetro = value;
+                }
+            }
         }
         public int cambio
         {
-            get { return Cambio; }
-            set { Cambio = value; }
+            get { return _cambio; }
+            set 
+            { 
+                if ( _cambio < 0 || _cambio > 7 )
+                {
+                    _cambio = 0;
+                }
+                else
+                {
+                    _cambio = value;
+                }
+            }
+        }
+        public bool frizione
+        {
+            get { return _frizione; }
+            set { _frizione = value; }
         }
         //funzioni
         public void accensione()
@@ -49,19 +76,18 @@ namespace Automobile
         }
         public void accelleratore()
         {
-            Tacchimetro = tacchimetro + 10;
+            _tacchimetro = tacchimetro + 10;
         }
         public void freno()
         {
-            if(Tacchimetro <= 0)
+            if(_tacchimetro <= 0)
             {
-                Tacchimetro = 0;
+                _tacchimetro = 0;
             }
             else
             {
-                Tacchimetro = tacchimetro - 10;
+                _tacchimetro = tacchimetro - 10;
             }
         }
-
     }
 }

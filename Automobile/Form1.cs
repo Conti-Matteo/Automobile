@@ -43,6 +43,7 @@ namespace Automobile
         {
 
         }
+
         private void button2_Click(object sender, EventArgs e)
         {
             auto.accensione();
@@ -58,6 +59,7 @@ namespace Automobile
                 label1.Text = "La macchina è accesa";
             }
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (auto.motore == false)
@@ -71,6 +73,7 @@ namespace Automobile
                 label3.Text = "";
             }
         }
+
         private void button4_Click(object sender, EventArgs e)
         {
             if(auto.motore == false)
@@ -85,7 +88,51 @@ namespace Automobile
             }
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            if(auto.tacchimetro>=30)
+            {
+
+            }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+
+        }
         #endregion
+
 
     }
 }
