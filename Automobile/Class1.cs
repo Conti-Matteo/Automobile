@@ -76,8 +76,57 @@ namespace Automobile
         }
         public void accelleratore()
         {
-            _tacchimetro = tacchimetro + 10;
-        }
+            if (cambio == 0)
+            {
+                _tacchimetro = tacchimetro + 0;
+            }
+            else if (cambio == 1)
+            {
+                if (tacchimetro == 20)
+                {
+                    _tacchimetro = tacchimetro + 0;
+                }
+                else if (cambio == 2)
+                {
+                    if (tacchimetro == 40)
+                    {
+                        _tacchimetro = tacchimetro + 0;
+                    }
+                    else if (cambio == 3)
+                    {
+                        if (tacchimetro == 60)
+                        {
+                            _tacchimetro = tacchimetro + 0;
+                        }
+                        else if (cambio == 4)
+                        {
+                            if (tacchimetro == 90)
+                            {
+                                _tacchimetro = tacchimetro + 0;
+                            }
+                            else if (cambio == 5)
+                            {
+                                if (tacchimetro == 120)
+                                {
+                                    _tacchimetro = tacchimetro + 0;
+                                }
+                            }
+                            else if (cambio == 6)
+                            {
+                                if (tacchimetro == 150)
+                                {
+                                    _tacchimetro = tacchimetro + 0;
+                                }
+                                else
+                                {
+                                    _tacchimetro = tacchimetro + 10;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+                            }
         public void freno()
         {
             if(_tacchimetro <= 0)

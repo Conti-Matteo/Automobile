@@ -36,6 +36,18 @@ namespace Automobile
         {
             label2.Text = auto.tacchimetro + "Km/h";
         }
+        private void label5_Click(object sender, EventArgs e)
+        {
+            label5.Text = Convert.ToString(auto.cambio);
+            if (label5.Text == "0")
+            {
+                label5.Text = "N";
+            }
+            else if (label5.Text == "7")
+            {
+                label5.Text = "R";
+            }
+        }
         #endregion
 
         #region Button
@@ -68,15 +80,77 @@ namespace Automobile
             }
             else
             {
-                auto.accelleratore();
-                label2.Text = auto.tacchimetro + "Km/h";
-                label3.Text = "";
+                if (auto.frizione == false)
+                {
+                    label3.Text = "Togliere la frizioe per accellerare";
+                }
+                else
+                {
+                    if (auto.cambio == 0)
+                    {
+                        label3.Text = "Togliere la folle per partire";
+                    }
+                    else if (auto.cambio == 1)
+                    {
+                        if (auto.tacchimetro >= 20)
+                        {
+                            label3.Text = "cambiare marcia per accellerare ulteriormente";
+                        }
+                        else if (auto.cambio == 2)
+                        {
+                            if (auto.tacchimetro >= 40)
+                            {
+                                label3.Text = "cambiare marcia per accellerare ulteriormente";
+                            }
+                            else if (auto.cambio == 3)
+                            {
+                                if (auto.tacchimetro >= 60)
+                                {
+                                    label3.Text = "cambiare marcia per accellerare ulteriormente";
+                                }
+                                else if (auto.cambio == 4)
+                                {
+                                    if (auto.tacchimetro >= 90)
+                                    {
+                                        label3.Text = "cambiare marcia per accellerare ulteriormente";
+                                    }
+                                    else if (auto.cambio == 5)
+                                    {
+                                        if (auto.tacchimetro >= 120)
+                                        {
+                                            label3.Text = "cambiare marcia per accellerare ulteriormente";
+                                        }
+                                        else if (auto.cambio == 6)
+                                        {
+                                            if (auto.tacchimetro >= 150)
+                                            {
+                                                label3.Text = "velocità massima";
+                                            }
+                                            else if (auto.cambio == 7)
+                                            {
+                                                if (auto.cambio != 0)
+                                                {
+                                                    label3.Text = "Mettere in folle per andare in retro";
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+
+                    auto.accelleratore();
+                    label2.Text = auto.tacchimetro + "Km/h";
+                    label3.Text = "";
+                }
             }
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            if(auto.motore == false)
+            if (auto.motore == false)
             {
                 label3.Text = "La macchina è spenta accendere il motore prima di partire";
             }
@@ -91,48 +165,168 @@ namespace Automobile
 
         private void button5_Click(object sender, EventArgs e)
         {
-            if(auto.tacchimetro>=30)
+            if (auto.frizione == false)
             {
-
+                label3.Text = "Premere la frizione per cambiare marcia";
+            }
+            else if (auto.tacchimetro == 0)
+            {
+                auto.cambio = 1;
+                label5.Text = Convert.ToString(auto.cambio);
+                if (label5.Text == "0")
+                {
+                    label5.Text = "N";
+                }
+                else if (label5.Text == "7")
+                {
+                    label5.Text = "R";
+                }
             }
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-
+            if (auto.frizione == false)
+            {
+                label3.Text = "Premere la frizione per cambiare marcia";
+            }
+            else if (auto.tacchimetro == 20)
+            {
+                auto.cambio = 2;
+                label5.Text = Convert.ToString(auto.cambio);
+                if (label5.Text == "0")
+                {
+                    label5.Text = "N";
+                }
+                else if (label5.Text == "7")
+                {
+                    label5.Text = "R";
+                }
+            }
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            if (auto.frizione == false)
+            {
+                label3.Text = "Premere la frizione per cambiare marcia";
+            }
+            else if (auto.tacchimetro == 40)
+            {
+                auto.cambio = 3;
+                label5.Text = Convert.ToString(auto.cambio);
+                if (label5.Text == "0")
+                {
+                    label5.Text = "N";
+                }
+                else if (label5.Text == "7")
+                {
+                    label5.Text = "R";
+                }
+            }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            if (auto.frizione == false)
+            {
+                label3.Text = "Premere la frizione per cambiare marcia";
+            }
+            else if (auto.tacchimetro == 60)
+            {
+                auto.cambio = 4;
+                label5.Text = Convert.ToString(auto.cambio);
+                if (label5.Text == "0")
+                {
+                    label5.Text = "N";
+                }
+                else if (label5.Text == "7")
+                {
+                    label5.Text = "R";
+                }
+            }
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-
+            if (auto.frizione == false)
+            {
+                label3.Text = "Premere la frizione per cambiare marcia";
+            }
+            else if (auto.tacchimetro == 90)
+            {
+                auto.cambio = 5;
+                label5.Text = Convert.ToString(auto.cambio);
+                if (label5.Text == "0")
+                {
+                    label5.Text = "N";
+                }
+                else if (label5.Text == "7")
+                {
+                    label5.Text = "R";
+                }
+            }
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-
+            if (auto.frizione == false)
+            {
+                label3.Text = "Premere la frizione per cambiare marcia";
+            }
+            else if (auto.tacchimetro == 120)
+            {
+                auto.cambio = 6;
+                label5.Text = Convert.ToString(auto.cambio);
+                if (label5.Text == "0")
+                {
+                    label5.Text = "N";
+                }
+                else if (label5.Text == "7")
+                {
+                    label5.Text = "R";
+                }
+            }
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-
+            if (auto.frizione == false)
+            {
+                label3.Text = "Premere la frizione per cambiare marcia";
+            }
+            else if (auto.tacchimetro == 150)
+            {
+                auto.cambio = 1;
+                label5.Text = Convert.ToString(auto.cambio);
+                if (label5.Text == "0")
+                {
+                    label5.Text = "N";
+                }
+                else if (label5.Text == "7")
+                {
+                    label5.Text = "R";
+                }
+            }
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
 
         }
-        #endregion
 
+        private void button13_Click(object sender, EventArgs e)
+        {
+            if (auto.frizione == false)
+            {
+                auto.frizione = true;
+            }
+            else
+            {
+                auto.frizione = false;
+            }
+        }
+        #endregion
 
     }
 }

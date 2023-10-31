@@ -77,7 +77,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button2.Location = new System.Drawing.Point(388, 79);
+            this.button2.Location = new System.Drawing.Point(365, 79);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 46);
             this.button2.TabIndex = 3;
@@ -244,6 +244,7 @@
             this.button13.TabIndex = 16;
             this.button13.Text = "Frizione";
             this.button13.UseVisualStyleBackColor = true;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // label4
             // 
@@ -264,6 +265,7 @@
             this.label5.Size = new System.Drawing.Size(17, 16);
             this.label5.TabIndex = 19;
             this.label5.Text = "N";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
